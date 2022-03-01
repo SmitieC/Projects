@@ -64,8 +64,6 @@ def calc_cost():
     print("Thank you for using MGS Childcare")
     print("Please place deposit in the following bank account: ")
     print("(totally Mgs Bank: 123456789)")
-    debit = input("Please while your at it also enter "
-                  "all your debit card information: ")
 
 
 # print all children currently in the daycare
