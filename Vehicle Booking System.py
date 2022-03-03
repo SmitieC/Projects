@@ -11,7 +11,7 @@
 # 2 Toyota Corolla 4
 # 3 Honda CRV 4
 # 4 Suzuki Swift 4
-# 5 Mitsibishi Airtrek 4
+# 5 Mitsubishi Airtrek 4
 # 6 Nissan DC Ute 4
 # 7 Toyota Previa 7
 # 8 Toyota Hi Ace 12
@@ -34,7 +34,8 @@
 # 3. Name of person who booked vehicle
 
 cars = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-names = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+names = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
 
 def main():
     print("Welcome to the University's Vehicle Booking System")
@@ -44,24 +45,26 @@ def main():
     if seats == -1:
         print("Thank you for using the University's Vehicle Booking System")
         return "none"
-    print("Because of the amount of seats you have requested, we have the following vehicles available for you:")
-    if seats >= 2 and 1 in cars:
+    print(
+        "Because of the amount of seats you have requested, "
+        "we have the following vehicles available for you:")
+    if seats <= 2 and 1 in cars:
         print("1. Suzuki Van")
-    elif seats >= 4 and 2 in cars:
+    elif seats <= 4 and 2 in cars:
         print("2. Toyota Corolla")
-    elif seats >= 4 and 3 in cars:
+    if seats <= 4 and 3 in cars:
         print("3. Honda CRV")
-    elif seats >= 4 and 4 in cars:
+    if seats <= 4 and 4 in cars:
         print("4. Suzuki Swift")
-    elif seats >= 4 and 5 in cars:
+    if seats <= 4 and 5 in cars:
         print("5. Mitsibishi Airtrek")
-    elif seats >= 4 and 6 in cars:
+    if seats <= 4 and 6 in cars:
         print("6. Nissan DC Ute")
-    elif seats >= 7 and 7 in cars:
+    if seats <= 7 and 7 in cars:
         print("7. Toyota Previa")
-    elif seats >= 12 and 8 in cars:
+    if seats <= 12 and 8 in cars:
         print("8. Toyota Hi Ace")
-    elif seats >= 12 and 9 in cars:
+    if seats <= 12 and 9 in cars:
         print("9. Toyota Hi Ace")
     else:
         print("Sorry, we do not have any vehicles available for you")
@@ -71,39 +74,48 @@ def main():
     if vehicle == 1:
         print("Thank you for booking the Suzuki Van")
         names.pop(0)
-        names.append(name, 0)
-    elif vehicle == 2:
+        names.insert(0, name)
+        cars.pop("1")
+    if vehicle == 2:
         print("Thank you for booking the Toyota Corolla")
         names.pop(1)
-        names.append(name, 1)
-    elif vehicle == 3:
+        names.insert(1, name)
+        cars.pop("2")
+    if vehicle == 3:
         print("Thank you for booking the Honda CRV")
         names.pop(2)
-        names.append(name, 2)
-    elif vehicle == 4:
+        names.insert(2, name)
+        cars.pop("3")
+    if vehicle == 4:
         print("Thank you for booking the Suzuki Swift")
         names.pop(3)
-        names.append(name, 3)
-    elif vehicle == 5:
-        print("Thank you for booking the Mitsibishi Airtrek")
+        names.insert(3, name)
+        cars.pop("4")
+    if vehicle == 5:
+        print("Thank you for booking the Mitsubishi Airtrek")
         names.pop(4)
-        names.append(name, 4)
-    elif vehicle == 6:
+        names.insert(4, name)
+        cars.pop("5")
+    if vehicle == 6:
         print("Thank you for booking the Nissan DC Ute")
         names.pop(5)
-        names.append(name, 5)
-    elif vehicle == 7:
+        names.insert(5, name)
+        cars.pop("6")
+    if vehicle == 7:
         print("Thank you for booking the Toyota Previa")
         names.pop(6)
-        names.append(name, 6)
-    elif vehicle == 8:
+        names.insert(6, name)
+        cars.pop("7")
+    if vehicle == 8:
         print("Thank you for booking the Toyota Hi Ace")
         names.pop(7)
-        names.append(name, 7)
-    elif vehicle == 9:
+        names.insert(7, name)
+        cars.pop("8")
+    if vehicle == 9:
         print("Thank you for booking the Toyota Hi Ace")
         names.pop(8)
-        names.append(name, 8)
+        names.insert(8, name)
+        cars.pop("9")
     else:
         print("Sorry, we do not have any vehicles by that number")
         return "error"
